@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spice Havenia - Premium Spices &amp; Chai | Pure Spices • Better Life</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&amp;family=Inter:wght@400;500;600&amp;display=swap');
+        
+        :root {
+            --gold: #d4a84b;
+        }
+        
+        .hero-bg {
+            background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.55)), url('https://picsum.photos/id/1015/2000/1200') center/cover no-repeat;
+        }
+        
+        .nav-link {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .nav-link:hover {
+            color: #d4a84b;
+            transform: translateY(-2px);
+        }
+        
+        .product-card {
+            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+        
+        .product-card:hover {
+            transform: scale(1.05) translateY(-15px);
+        }
+        
+        .banner {
+            animation: slide 8s infinite;
+        }
+    </style>
+</head>
+<body class="bg-amber-50 text-amber-950 font-sans">
+    <!-- NAVBAR -->
+    <nav class="bg-white border-b border-amber-200 sticky top-0 z-50 shadow-sm">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <div class="flex items-center gap-3">
+                    <div class="w-12 h-12 bg-gradient-to-br from-amber-600 to-yellow-500 rounded-2xl flex items-center justify-center shadow-lg">
+                        <span class="text-white text-3xl font-bold">Spice</span>
+                    </div>
+                    <div>
+                        <h1 class="text-3xl font-bold tracking-tighter text-amber-900">Spice Havenia</h1>
+                        <p class="text-[10px] text-amber-600 -mt-1 font-medium">PURE SPICES • BETTER LIFE</p>
+                    </div>
+                </div>
+
+                <!-- Menu -->
+                <div class="hidden md:flex items-center gap-8 text-sm font-medium">
+                    <a href="#products" class="nav-link text-amber-900 hover:text-amber-600">Products</a>
+                    <a href="#masala" class="nav-link text-amber-900 hover:text-amber-600">Masala</a>
+                    <a href="#chai" class="nav-link text-amber-900 hover:text-amber-600">Chai</a>
+                    <a href="#deals" class="nav-link text-amber-900 hover:text-amber-600">Offers</a>
+                    <a href="#about" class="nav-link text-amber-900 hover:text-amber-600">About</a>
+                </div>
+
+                <div class="flex items-center gap-6">
+                    <button onclick="alert('Cart opened (demo)')" 
+                            class="flex items-center gap-2 text-amber-900 hover:text-amber-600">
+                        <i class="fa-solid fa-cart-shopping text-xl"></i>
+                        <span class="text-sm font-medium">Cart <span class="bg-amber-100 text-amber-600 px-2 py-0.5 rounded-full text-xs">0</span></span>
+                    </button>
+                    <button onclick="document.getElementById('whatsapp').scrollIntoView({behavior:'smooth'})"
+                            class="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-2xl font-semibold flex items-center gap-2 shadow-lg">
+                        <i class="fa-brands fa-whatsapp text-xl"></i>
+                        <span>Order Now</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <header class="hero-bg h-screen flex items-center relative">
+        <div class="max-w-4xl mx-auto px-6 text-center text-white">
+            <div class="inline-flex items-center gap-3 bg-white/10 backdrop-blur-md px-8 py-3 rounded-3xl mb-6">
+                <span class="text-amber-400">★</span>
+                <span class="uppercase tracking-[3px] text-sm font-medium">100% Pure • No Preservatives</span>
+                <span class="text-amber-400">★</span>
+            </div>
+            
+            <h1 class="text-6xl md:text-7xl font-bold leading-none tracking-tighter mb-4">
+                Har Dish<br>Har Chai<br><span class="text-amber-400">Khaas</span>
+            </h1>
+            <p class="text-2xl md:text-3xl font-light text-amber-100 mb-10">Premium spices &amp; exotic masala chai since 2018</p>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#products" 
+                   class="bg-white text-amber-900 hover:bg-amber-100 px-10 py-6 rounded-3xl font-semibold text-lg inline-flex items-center justify-center gap-3 shadow-2xl transition-all">
+                    <i class="fa-solid fa-leaf"></i>
+                    <span>Shop Premium Spices</span>
+                </a>
+                <a href="#chai" 
+                   class="border-2 border-white hover:bg-white/10 text-white px-10 py-6 rounded-3xl font-semibold text-lg inline-flex items-center justify-center gap-3 transition-all">
+                    <i class="fa-solid fa-mug-hot"></i>
+                    <span>Try Shahi Masala Chai</span>
+                </a>
+            </div>
+            
+            <div class="mt-16 flex justify-center gap-8 text-sm">
+                <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-check text-emerald-400"></i>
+                    <span>No added preservatives</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-check text-emerald-400"></i>
+                    <span>Rich aroma &amp; flavour</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-check text-emerald-400"></i>
+                    <span>30 Pouch Combo</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll indicator -->
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-white/70">
+            <div class="text-xs tracking-widest">SCROLL TO EXPLORE</div>
+            <div class="w-px h-12 bg-gradient-to-b from-transparent via-white to-transparent"></div>
+        </div>
+    </header>
+
+    <!-- BANNERS -->
+    <div class="max-w-7xl mx-auto px-6 py-12">
+        <div class="grid md:grid-cols-2 gap-8">
+            <!-- Banner 1 -->
+            <div onclick="window.open('https://wa.me/919876543210','_blank')" 
+                 class="bg-gradient-to-r from-amber-700 to-amber-600 rounded-3xl p-10 text-white cursor-pointer hover:scale-[1.02] transition-transform">
+                <div class="flex justify-between items-start">
+                    <div>
+                        <div class="uppercase text-amber-300 text-sm tracking-widest font-medium">Limited Time Offer</div>
+                        <h3 class="text-5xl font-bold mt-3">30 Pouch Combo</h3>
+                        <p class="text-4xl font-semibold mt-1">₹599 only</p>
+                    </div>
+                    <div class="text-8xl">🥘</div>
+                </div>
+                <p class="mt-8 text-lg">Kitchen King Masala + Garam Masala + Chai</p>
+            </div>
+
+            <!-- Banner 2 -->
+            <div onclick="window.open('https://wa.me/919876543210','_blank')" 
+                 class="bg-gradient-to-r from-orange-600 to-amber-600 rounded-3xl p-10 text-white cursor-pointer hover:scale-[1.02] transition-transform">
+                <div class="flex justify-between items-start">
+                    <div>
+                        <div class="uppercase text-amber-300 text-sm tracking-widest font-medium">Freshly Ground</div>
+                        <h3 class="text-5xl font-bold mt-3">Shahi Masala Chai</h3>
+                        <p class="text-4xl font-semibold mt-1">₹249 / 50g</p>
+                    </div>
+                    <div class="text-8xl">🍵</div>
+                </div>
+                <p class="mt-8 text-lg">Royal taste • No added chemicals</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- PRODUCTS SECTION -->
+    <section id="products" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex items-end justify-between mb-12">
+                <div>
+                    <span class="px-5 py-2 bg-amber-100 text-amber-700 rounded-3xl text-sm font-medium">Our Best Sellers</span>
+                    <h2 class="text-5xl font-bold tracking-tighter mt-4">Premium Spices</h2>
+                </div>
+                <a href="#" class="flex items-center gap-3 text-amber-700 hover:text-amber-900 text-lg font-medium">
+                    View all <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <div class="grid md:grid-cols-4 gap-8">
+                <!-- Product Card 1 -->
+                <div class="product-card bg-white border border-amber-200 rounded-3xl overflow-hidden">
+                    <div class="h-64 bg-amber-50 flex items-center justify-center">
+                        <img src="https://picsum.photos/id/201/400/300" alt="Kitchen King Masala" class="w-52 h-52 object-contain">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h4 class="font-semibold text-xl">Kitchen King Masala</h4>
+                                <p class="text-amber-600 text-sm">100g • ₹249</p>
+                            </div>
+                            <div class="text-right">
+                                <span class="text-emerald-600 font-bold text-2xl">₹249</span>
+                            </div>
+                        </div>
+                        <button onclick="addToCart(this)" 
+                                class="mt-6 w-full bg-amber-900 hover:bg-amber-800 text-white py-4 rounded-2xl font-semibold text-sm transition">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product Card 2 -->
+                <div class="product-card bg-white border border-amber-200 rounded-3xl overflow-hidden">
+                    <div class="h-64 bg-amber-50 flex items-center justify-center">
+                        <img src="https://picsum.photos/id/251/400/300" alt="Garam Masala" class="w-52 h-52 object-contain">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h4 class="font-semibold text-xl">Garam Masala</h4>
+                                <p class="text-amber-600 text-sm">100g • ₹179</p>
+                            </div>
+                            <div class="text-right">
+                                <span class="text-emerald-600 font-bold text-2xl">₹179</span>
+                            </div>
+                        </div>
+                        <button onclick="addToCart(this)" 
+                                class="mt-6 w-full bg-amber-900 hover:bg-amber-800 text-white py-4 rounded-2xl font-semibold text-sm transition">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product Card 3 -->
+                <div class="product-card bg-white border border-amber-200 rounded-3xl overflow-hidden">
+                    <div class="h-64 bg-amber-50 flex items-center justify-center">
+                        <img src="https://picsum.photos/id/180/400/300" alt="Shahi Masala Chai" class="w-52 h-52 object-contain">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h4 class="font-semibold text-xl">Shahi Masala Chai</h4>
+                                <p class="text-amber-600 text-sm">50g • ₹249</p>
+                            </div>
+                            <div class="text-right">
+                                <span class="text-emerald-600 font-bold text-2xl">₹249</span>
+                            </div>
+                        </div>
+                        <button onclick="addToCart(this)" 
+                                class="mt-6 w-full bg-amber-900 hover:bg-amber-800 text-white py-4 rounded-2xl font-semibold text-sm transition">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product Card 4 -->
+                <div class="product-card bg-white border border-amber-200 rounded-3xl overflow-hidden">
+                    <div class="h-64 bg-amber-50 flex items-center justify-center">
+                        <img src="https://picsum.photos/id/160/400/300" alt="Green Cardamom" class="w-52 h-52 object-contain">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h4 class="font-semibold text-xl">Green Cardamom</h4>
+                                <p class="text-amber-600 text-sm">100g • ₹399</p>
+                            </div>
+                            <div class="text-right">
+                                <span class="text-emerald-600 font-bold text-2xl">₹399</span>
+                            </div>
+                        </div>
+                        <button onclick="addToCart(this)" 
+                                class="mt-6 w-full bg-amber-900 hover:bg-amber-800 text-white py-4 rounded-2xl font-semibold text-sm transition">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MASALA SECTION -->
+    <section id="masala" class="py-20 bg-amber-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-5xl font-bold text-center mb-12">Our Signature Masalas</h2>
+            
+            <div class="grid md:grid-cols-3 gap-10">
+                <div class="text-center">
+                    <div class="w-40 h-40 mx-auto bg-white rounded-3xl shadow-xl flex items-center justify-center text-7xl mb-6">🥘</div>
+                    <h3 class="text-3xl font-bold">Kitchen King Masala</h3>
+                    <p class="mt-3 text-amber-700">Perfect blend for delicious homemade taste</p>
+                    <div class="mt-8 text-3xl font-semibold text-emerald-600">₹249 / 100g</div>
+                </div>
+                <div class="text-center">
+                    <div class="w-40 h-40 mx-auto bg-white rounded-3xl shadow-xl flex items-center justify-center text-7xl mb-6">🌿</div>
+                    <h3 class="text-3xl font-bold">Garam Masala</h3>
+                    <p class="mt-3 text-amber-700">Classic Indian warming spice blend</p>
+                    <div class="mt-8 text-3xl font-semibold text-emerald-600">₹179 / 100g</div>
+                </div>
+                <div class="text-center">
+                    <div class="w-40 h-40 mx-auto bg-white rounded-3xl shadow-xl flex items-center justify-center text-7xl mb-6">🍛</div>
+                    <h3 class="text-3xl font-bold">Shahi Masala</h3>
+                    <p class="mt-3 text-amber-700">Royal &amp; royal taste for every curry</p>
+                    <div class="mt-8 text-3xl font-semibold text-emerald-600">₹299 / 100g</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CHAI SECTION -->
+    <section id="chai" class="py-20 bg-white">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row gap-16 items-center">
+                <div class="md:w-1/2">
+                    <img src="https://picsum.photos/id/1016/800/600" alt="Shahi Masala Chai" class="rounded-3xl shadow-2xl">
+                </div>
+                <div class="md:w-1/2">
+                    <h2 class="text-5xl font-bold leading-none">Shahi Masala Chai</h2>
+                    <p class="text-2xl text-amber-700 mt-6">Premium tea with exotic spices</p>
+                    <div class="my-8 space-y-4">
+                        <div class="flex items-center gap-4">
+                            <i class="fa-solid fa-check text-emerald-500 text-2xl"></i>
+                            <span>Premium black tea leaves</span>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <i class="fa-solid fa-check text-emerald-500 text-2xl"></i>
+                            <span>Star anise • Cardamom • Ginger</span>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <i class="fa-solid fa-check text-emerald-500 text-2xl"></i>
+                            <span>Strong &amp; refreshing</span>
+                        </div>
+                    </div>
+                    <div class="text-4xl font-bold text-emerald-600">₹249 / 50g pouch</div>
+                    <button onclick="alert('WhatsApp order opened!')" 
+                            class="mt-10 w-full md:w-auto bg-green-600 hover:bg-green-700 text-white px-12 py-6 rounded-3xl text-xl font-semibold inline-flex items-center gap-4">
+                        <i class="fa-brands fa-whatsapp text-3xl"></i>
+                        Order on WhatsApp
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- OFFER SECTION -->
+    <section id="deals" class="py-20 bg-gradient-to-b from-amber-50 to-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <span class="bg-amber-100 text-amber-700 px-6 py-2 rounded-3xl text-sm font-bold">FLASH SALE</span>
+                <h2 class="text-5xl font-bold mt-6">30 Pouches • Special Price</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="bg-white rounded-3xl p-8 text-center shadow">
+                    <div class="text-6xl mb-4">🥘</div>
+                    <h4 class="font-bold text-2xl">Kitchen King Masala</h4>
+                    <div class="mt-6 text-5xl font-bold text-emerald-600">₹599</div>
+                    <div class="line-through text-amber-400">₹999</div>
+                    <p class="text-green-600 mt-2">40% OFF</p>
+                    <button onclick="addToCart(this)" class="mt-8 w-full bg-amber-900 text-white py-4 rounded-2xl">Add to Cart</button>
+                </div>
+                
+                <div class="bg-white rounded-3xl p-8 text-center shadow">
+                    <div class="text-6xl mb-4">🌶️</div>
+                    <h4 class="font-bold text-2xl">Garam Masala</h4>
+                    <div class="mt-6 text-5xl font-bold text-emerald-600">₹479</div>
+                    <div class="line-through text-amber-400">₹799</div>
+                    <p class="text-green-600 mt-2">40% OFF</p>
+                    <button onclick="addToCart(this)" class="mt-8 w-full bg-amber-900 text-white py-4 rounded-2xl">Add to Cart</button>
+                </div>
+                
+                <div class="bg-white rounded-3xl p-8 text-center shadow">
+                    <div class="text-6xl mb-4">🍵</div>
+                    <h4 class="font-bold text-2xl">Shahi Masala Chai</h4>
+                    <div class="mt-6 text-5xl font-bold text-emerald-600">₹699</div>
+                    <div class="line-through text-amber-400">₹999</div>
+                    <p class="text
